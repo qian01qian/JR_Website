@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 標籤 -->
+    <title>晢瑞實業有限公司</title>
+    <link rel="shortcut icon" href="icon.ico">
+    <!-- link css -->
+</head>
+<body>
+    <script>
+        fetch('header.html')
+        .then(respose => respose.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    
+    <script>
+        fetch('footer.html')
+        .then(respose => respose.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+</html>
