@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>聯絡我們</title>
+    <link rel="shortcut icon" href="icon.ico">
+    <link rel="stylesheet" href="css/building.css">
 </head>
 <body>
-    
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+        .then(respose => respose.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+    <div class="gif"><img src="res/heart-love.gif"></div>
+    <div class="gif"><h1>Building</h1></div>
+    <div class="gif1"><img src="res/hearts-loading.gif"></div>
+
+
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+        .then(respose => respose.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+    <script src="js/header.js"defer></script>
+    <script src="js/footer.js"defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 </html>
