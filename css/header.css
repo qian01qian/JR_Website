@@ -1,6 +1,19 @@
-.header{
-    width:100%;
+.header {
+    width: 100%;
+    position: fixed; /* 固定在頁面頂部 */
+    top: 0; /* 確保在頂部 */
+    left: 0;
+    z-index: 100; /* 確保 header 在其他內容之上 */
+    background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影，讓 header 更立體 */
 }
+
+/* 確保內容不被 header 覆蓋 */
+body {
+    margin-top: 80px; /* 根據 header 的高度調整 */
+}
+
+
 .header_index{
     margin-left: 100px;
     margin-right: 100px;

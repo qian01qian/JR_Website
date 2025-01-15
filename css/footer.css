@@ -9,9 +9,10 @@
     box-sizing: border-box; /* 包含內邊距，避免影響寬度 */
     overflow-x: hidden; /* 禁止水平滾動 */
     color: #fafafa; /* 與背景對比的文字顏色 */
-    position: relative; /* 確保正常定位 */
+    position: sticky; /* 確保正常定位 */
     margin-top: 50px;
     margin-bottom: 50px;
+    z-index: 100;;
 }
 
 .footer_left {
