@@ -1,8 +1,12 @@
+.header{
+    width:100%;
+}
 .header_index{
-    margin-left: 80px;
-    margin-right: 80px;
+    margin-left: 100px;
+    margin-right: 100px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 50px;
 }
 .background{
@@ -21,6 +25,8 @@
 .index {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    justify-content: center;
     gap: 40px; /* 控制中間文字間距 */
 }
 

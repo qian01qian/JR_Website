@@ -1,0 +1,71 @@
+.footer {
+    display: flex;
+    align-items: flex-start; /* 內容從頂部對齊 */
+    background-color: #1e1e1e; /* 深色背景 */
+    padding: 90px 50px; /* 增加內邊距，提升舒適度 */
+    width: 100%; /* 固定寬度 */
+    height: auto;
+    max-width: 100vw; /* 防止超過視窗寬度 */
+    box-sizing: border-box; /* 包含內邊距，避免影響寬度 */
+    overflow-x: hidden; /* 禁止水平滾動 */
+    color: #fafafa; /* 與背景對比的文字顏色 */
+    position: relative; /* 確保正常定位 */
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.footer_left {
+    width: 25%; /* 左邊佔30%空間 */
+    font-size: 16px; /* 調整文字大小 */
+    line-height: 1.8; /* 提升可讀性 */
+    margin-left: 80px;
+}
+
+.line {
+    border-left: 1px solid #ababab;
+    height: auto; /* 高度自動適應內容 */
+    align-self: stretch; /* 撐滿父容器高度 */
+    margin: 0 20px; /* 增加分隔線與左右區域的距離 */
+}
+
+.footer_right {
+    display: flex;
+    flex-wrap: nowrap; /* 自動換行，避免內容過多時溢出 */
+    margin-top: 20px;
+    font-size: 16px;
+    gap: 120px; /* 增加區塊間距 */
+    justify-content: space-between; /* 分布內容，使每部分均勻排列 */
+    margin-left: 100px;
+}
+
+.section1, .section2, .section3, .section4 {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* 增加小標題和內容的間距 */
+}
+
+.sec1_content, .sec2_content, .sec3_content, .sec4_content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* 連結之間的間距 */
+}
+.sec1_title a, .sec2_title a, .sec3_title a, .sec4_title a {
+    color: #fafafa; /* 標題文字顏色 */
+    font-size: 16px; /* 標題字體大小 */
+    font-weight: 500; /* 中等字重 */
+}
+.sec1_content a, .sec2_content a, .sec3_content a, .sec4_content a {
+    color: #dcdcdc; /* 柔和的文字顏色 */
+    text-decoration: none; /* 移除下劃線 */
+    font-size: 13px;
+}
+
+.sec1_content a:hover, .sec2_content a:hover, .sec3_content a:hover, .sec4_content a:hover {
+    color: #ffffff; /* 滑鼠懸停時變亮 */
+    text-decoration: underline; /* 添加下劃線效果 */
+}
+
+.footer h3, .footer h4 {
+    margin: 10px 0; /* 標題和段落間距 */
+    font-weight: 500; /* 中等字重 */
+}
