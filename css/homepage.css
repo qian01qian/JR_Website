@@ -8,6 +8,16 @@
     --hover-shadow-color: rgba(0, 0, 0, 0.3);
     --transition-duration: 0.2s;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 確保 padding 和 border 不會影響元素大小 */
+}
+
+html, body {
+    overflow-x: hidden; /* 禁止水平滾動 */
+    width: 100%;
+}
 
 /* Banner 區塊 */
 .banner{

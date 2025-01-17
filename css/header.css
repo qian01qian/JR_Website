@@ -1,55 +1,100 @@
 .header {
     width: 100%;
     position: fixed; /* 固定在頁面頂部 */
-    top: 0; /* 確保在頂部 */
+    top: 5px;
     left: 0;
     z-index: 100; /* 確保 header 在其他內容之上 */
     background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影，讓 header 更立體 */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+    box-sizing: border-box; /* 確保內邊距不影響寬度 */
 }
 
-/* 確保內容不被 header 覆蓋 */
 body {
     margin-top: 80px; /* 根據 header 的高度調整 */
 }
 
-
-.header_index{
-    margin-left: 100px;
-    margin-right: 100px;
+.header_index {
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    gap: 50px;
-}
-.background{
-    position: relative;
-    background-color: #fafafa;
-    opacity: 40%;
-}
-.header_logo {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    margin-top: 10px;
-    margin-left: 5px;
+    max-width: 1200px; /* 限制 header 內容區域的最大寬度 */
+    padding: 0 0px; /* 添加左右間距 */
 }
 
 .index {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    justify-content: center;
-    gap: 40px; /* 控制中間文字間距 */
+    gap: 20px;
 }
 
+/* .dropdown 為整個下拉選單區塊 */
+.dropdown {
+    position: relative;
+}
 
-a {
+/* 將整個區塊作為觸發區 */
+.dropdown .trigger {
+    display: block; /* 整塊呈現 */
+    padding: 10px 20px; /* 擴大觸發範圍 */
+    color: #050604;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: transparent;
+    border: 1px solid transparent; /* 預設邊框，可依需要調整 */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* hover 時的反饋 */
+.dropdown .trigger:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 下拉選單預設隱藏 */
+/* 下拉選單預設隱藏 */
+.dropdown-menu {
+    display: none; /* 初始隱藏 */
+    position: absolute;
+    top: calc(100% + 5px); /* 與觸發按鈕保持距離 */
+    left: 50%; /* 將選單水平對齊到按鈕的中心 */
+    transform: translateX(-50%); /* 使選單精確置中 */
+    width: 200px; /* 固定寬度 */
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加陰影 */
+    border-radius: 5px; /* 添加圓角 */
+    padding: 10px 0; /* 上下內邊距 */
+    z-index: 200;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* 添加過渡效果 */
+}
+
+/* 當滑鼠懸停 .dropdown 時顯示選單 */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px; /* 擴大點擊範圍 */
     color: #050604;
     text-decoration: none;
-    font-weight: normal; /* 確保文字無粗體 */
+    white-space: nowrap; /* 防止文字換行 */
+    font-size: 14px;
+    text-align: center; /* 文字置中 */
 }
 
-a:hover{
-    font-weight: bold;
+.dropdown-menu a:hover {
+    background-color: #f0f0f0; /* 懸停效果 */
+}
+
+.dropdown::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 5px; /* 可根據實際間隙調整 */
 }
