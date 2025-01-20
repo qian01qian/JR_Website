@@ -11,7 +11,7 @@
     color: #fafafa; /* 與背景對比的文字顏色 */
     position: sticky; /* 確保正常定位 */
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     z-index: 100;;
 }
 
@@ -54,6 +54,7 @@
     color: #fafafa; /* 標題文字顏色 */
     font-size: 16px; /* 標題字體大小 */
     font-weight: 500; /* 中等字重 */
+    text-decoration: none; /* 移除下劃線 */
 }
 .sec1_content a, .sec2_content a, .sec3_content a, .sec4_content a {
     color: #dcdcdc; /* 柔和的文字顏色 */
