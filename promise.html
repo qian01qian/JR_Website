@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>經營理念</title>
+    <link rel="shortcut icon" href="icon.ico">
+    <link rel="stylesheet" href="css/promise.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+        .then(respose => respose.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+    
+    <div class="body1">
+        <h2 class="promise_title">經營理念</h2>
+        <div class="sandwich">
+            <p><a href="index.html">首頁</a> > <a href="about_us.html">關於晢瑞</a> > 經營理念</p>
+        </div>
+        <div class="container">
+            <img src="res/promise.png" alt="經營理念" class="promise_image">
+        </div>
+        <p class="promise_content">在晢瑞實業，我們以 品質第一 為宗旨，將每一件產品視為精雕細琢的藝術品，確保每一個細節都經得起考驗。因為我們深信，只有堅守品質，才能贏得信賴。<br><br>
+
+            我們不僅追求卓越，更致力於 客戶滿意度 的提升。每一個需求都是我們努力的方向，每一位客戶的滿意微笑都是我們前進的動力。我們與您攜手，實現雙贏。<br><br>
+            
+            更重要的是，我們承諾提供 最佳服務。不論是生產效率、產品創新，還是售後支持，我們都將全力以赴，讓您感受到專業與貼心的極致結合。<br><br>
+            
+            晢瑞實業，成就您的願景，共創嶄新的未來！ 選擇我們，就是選擇卓越與信任！</p>
+    </div>
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+        .then(respose => respose.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+        </script>
+
+    <script src="js/header.js"defer></script>
+    <script src="js/footer.js"defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>

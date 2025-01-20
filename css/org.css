@@ -1,0 +1,43 @@
+:root {
+    --main-bg-color: #a1b7df;
+    --main-text-color: #000;
+    --light-text-color: #666;
+    --white: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --hover-shadow-color: rgba(0, 0, 0, 0.3);
+    --transition-duration: 0.2s;
+  }
+  .body{
+    background-color: var(--main-bg-color);
+  }
+  .body1{
+    width: 1200px;
+    margin: 0 auto;
+    padding:   0 0 40px 0;
+  }
+  .body1 .org_title{
+    font-size: 2rem;
+    font-weight: bolder;    
+  }
+  .sandwich{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    margin-bottom: 5px;
+  }
+  .sandwich a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--main-text-color);
+  }
+  .container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+    .org_image{
+    width: 800px;
+    display: flex;
+    justify-content: center;
+
+  }

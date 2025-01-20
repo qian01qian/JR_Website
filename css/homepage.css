@@ -1,4 +1,4 @@
-/* 全域樣式 */
+/* 全域變數 */
 :root {
     --main-bg-color: #a1b7df;
     --main-text-color: #000;
@@ -7,53 +7,75 @@
     --shadow-color: rgba(0, 0, 0, 0.2);
     --hover-shadow-color: rgba(0, 0, 0, 0.3);
     --transition-duration: 0.2s;
-}
-* {
+  }
+  
+  /* Reset 與全域設定 */
+  * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* 確保 padding 和 border 不會影響元素大小 */
-}
-
-html, body {
-    overflow-x: hidden; /* 禁止水平滾動 */
+    box-sizing: border-box;
+  }
+  
+  html, body {
     width: 100%;
-}
-
-/* Banner 區塊 */
-.banner{
-    display: flex;
-    justify-content: center;
-}
-.banner_homepage_image {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* 主要容器設定：置中並限制最大寬度 */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Header 與 Footer 基本樣式 */
+  header, footer {
+    padding: 20px;
+    background-color: var(--main-bg-color);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Banner 區塊 */
+  .banner {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  
+  .banner_homepage_image {
     width: 100%;
     height: 400px;
     object-fit: cover;
-}
-
-.banner_overlay {
+  }
+  
+  .banner_overlay {
     position: absolute;
+    margin-top: 100px;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 400px;
-    background-color: rgba(255, 255, 255, 0.65); /* 白色，40% 不透明度 */
+    background-color: rgba(255, 255, 255, 0.65);
     z-index: 1;
-}
-
-.banner_contents {
+  }
+  
+  .banner_contents {
     position: absolute;
     top: 33%;
+    margin-top: 200px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
     text-align: center;
     font-size: 25px;
     color: var(--main-text-color);
-}
-
-/* 按鈕樣式 */
-.contact-button {
-    margin-top: 5px;
+  }
+  
+  /* 按鈕樣式 */
+  .contact-button {
+    margin-top: 10px;
     display: inline-block;
-    text-align: center;
     padding: 10px 30px;
     font-size: 16px;
     font-weight: bold;
@@ -63,79 +85,92 @@ html, body {
     border-radius: 50px;
     box-shadow: 0 4px 6px var(--shadow-color);
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
-}
-
-.contact-button:hover {
+  }
+  
+  .contact-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 10px var(--hover-shadow-color);
-}
-
-.contact-button:active {
+  }
+  
+  .contact-button:active {
     transform: translateY(0);
     box-shadow: 0 4px 6px var(--shadow-color);
-}
-
-/* 代工類別樣式 */
-.category-section {
+  }
+  
+  /* 代工類別區塊 */
+  .category-section {
     text-align: center;
     background-color: var(--white);
     padding: 40px 20px;
-}
-
-.category-title {
+    margin-bottom: 20px;
+  }
+  
+  .category-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
-}
-
-.category-subtitle {
+  }
+  
+  .category-subtitle {
     font-size: 1.2rem;
     color: var(--light-text-color);
     margin-bottom: 30px;
-}
-
-.category-container {
+  }
+  
+  /* 代工卡片區塊 */
+  .category-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}
-
-.category-card {
+  }
+  
+  .category-card {
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow-color);
     overflow: hidden;
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.category-card:hover {
+    margin-bottom: 20px;
+  }
+  
+  .category-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px var(--hover-shadow-color);
-}
-
-.category-image {
+  }
+  
+  .category-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
-}
-
-.category-info {
+  }
+  
+  .category-info {
     padding: 15px;
     height: 88px;
     background-color: var(--main-bg-color);
     color: var(--white);
     text-align: left;
-}
-
-.category-info h3 {
+  }
+  
+  .category-info h3 {
     font-size: 1.2rem;
-    margin: 0 0 10px;
-}
-
-.category-info p {
+    margin-bottom: 10px;
+  }
+  
+  .category-info p {
     font-size: 0.9rem;
-    margin: 0;
-}
+  }
+  
+  /* Map 區塊 */
+  .map-section {
+    margin-bottom: 20px;
+  }
+  
+  .map {
+    width: 100%;
+    height: 450px;
+    border: 0;
+  }
+  

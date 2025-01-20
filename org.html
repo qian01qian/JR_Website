@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>組織圖</title>
+    <link rel="shortcut icon" href="icon.ico">
+    <link rel="stylesheet" href="css/org.css">
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+        .then(respose => respose.text())
+        .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+    
+    <div class="body1">
+        <h2 class="org_title">組織圖</h2>
+        <div class="sandwich">
+            <p><a href="index.html">首頁</a> > <a href="about_us.html">關於晢瑞</a> > 組織圖</p>
+        </div>
+        <div class="container">
+            <img src="res/org.png" alt="組織圖" class="org_image">
+        </div>
+    </div>
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+        .then(respose => respose.text())
+        .then(data => document.getElementById('footer').innerHTML = data);
+        </script>
+
+    <script src="js/header.js"defer></script>
+    <script src="js/footer.js"defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
