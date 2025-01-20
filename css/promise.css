@@ -13,7 +13,7 @@
   .body1{
     width: 1200px;
     margin: 0 auto;
-    padding:   0 0 40px 0;
+    padding:   3px 0 40px 0;
   }
   .body1 .promise_title{
     font-size: 2rem;
@@ -46,3 +46,20 @@
     color: var(--light-text-color);
     padding: 20px 10px;
   }
+  /* 淡入上移的動畫效果 */
+  @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* 從下方移入 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+.fade-in-up {
+  opacity: 0; /* 初始狀態 */
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: forwards; /* 確保動畫結束時保持最終狀態 */
+}
+
