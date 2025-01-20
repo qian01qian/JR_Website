@@ -14,7 +14,14 @@
     margin-bottom: 0px;
     z-index: 100;;
 }
-
+header, footer {
+    padding: 20px;
+    background-color: var(--main-bg-color);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
 .footer_left {
     width: 25%; /* 左邊佔30%空間 */
     font-size: 16px; /* 調整文字大小 */

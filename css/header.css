@@ -78,7 +78,14 @@ body {
 .dropdown:hover .dropdown-menu {
     display: block;
 }
-
+header, footer {
+    padding: 20px;
+    background-color: var(--main-bg-color);
+    color: var(--white);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
 .dropdown-menu a {
     display: block;
     padding: 10px 15px; /* 擴大點擊範圍 */
