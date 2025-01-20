@@ -51,6 +51,7 @@ html, body {
 
 /* 按鈕樣式 */
 .contact-button {
+    margin-top: 5px;
     display: inline-block;
     text-align: center;
     padding: 10px 30px;
@@ -123,6 +124,7 @@ html, body {
 
 .category-info {
     padding: 15px;
+    height: 88px;
     background-color: var(--main-bg-color);
     color: var(--white);
     text-align: left;
