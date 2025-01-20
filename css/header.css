@@ -1,7 +1,8 @@
 .header {
     width: 100%;
     position: fixed; /* 固定在頁面頂部 */
-    top: 5px;
+    height: auto;
+    top: 0px;
     left: 0;
     z-index: 100; /* 確保 header 在其他內容之上 */
     background-color: rgba(255, 255, 255, 0.95); /* 半透明背景 */
@@ -21,10 +22,12 @@ body {
     align-items: center;
     max-width: 1200px; /* 限制 header 內容區域的最大寬度 */
     padding: 0 0px; /* 添加左右間距 */
+    margin-top: 5px;
 }
 
 .index {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 20px;
 }
