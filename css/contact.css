@@ -1,0 +1,97 @@
+/* 重置與基礎設置 */
+:root {
+    --main-bg-color: #a1b7df;
+    --main-text-color: #000;
+    --light-text-color: #666;
+    --white: #fff;
+    --shadow-color: rgba(0, 0, 0, 0.2);
+    --hover-shadow-color: rgba(0, 0, 0, 0.3);
+    --transition-duration: 0.2s;
+  }
+body {
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* 標題區域 */
+.contact_title {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+/* 導覽面包屑 */
+.sandwich{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    margin-bottom: 5px;
+  }
+  .sandwich a{
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--main-text-color);
+  }
+
+/* 主要容器設置 */
+.body1 {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 8px;
+}
+.body1 .contact_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+/* 左邊區域 */
+.container_left {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.container_left img {
+    max-width: 200px;
+    border: 4px solid var(--main-bg-color);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+.container_left p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 右邊區域 */
+.container_right {
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+.container_right h3 {
+    font-size: 1.8rem;
+    color: var(--main-bg-color);
+    margin-bottom: 0.5rem;
+}
+.container_right h4 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+/* 動畫效果 */
+.fade-in-up {
+    animation: fadeInUp 1s ease-out;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
