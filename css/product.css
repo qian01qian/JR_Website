@@ -1,4 +1,3 @@
-/* 全域變數 */
 :root {
     --main-bg-color: #a1b7df;
     --main-text-color: #000;
@@ -10,63 +9,38 @@
   }
   
   /* Reset 與全域設定 */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    width: 100%;
-    overflow-x: hidden;
-    font-family: Arial, sans-serif;
-  }
-  
-  /* 主要容器設定：置中並限制最大寬度 */
-  .container {
-    max-width: 1200px;
+  .body1{
+    width: 1200px;
     margin: 0 auto;
+    padding:   30px 0 40px 0;
   }
-  
-  /* Header 與 Footer 基本樣式 */
-
-  /* Banner 區塊 */
-  .banner {
-    position: relative;
-    margin-bottom: 20px;
+  .body1 .promise_title{
+    font-size: 2rem;
+    font-weight: bolder;    
   }
-  
-  .banner_homepage_image {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
+  .sandwich{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 30px;
+    margin-bottom: 5px;
   }
-  
-  .banner_overlay {
-    position: absolute;
-    margin-top: 100px;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 400px;
-    background-color: rgba(255, 255, 255, 0.65);
-    z-index: 1;
-  }
-  
-  .banner_contents {
-    position: absolute;
-    top: 33%;
-    margin-top: 200px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 3;
-    text-align: center;
-    font-size: 25px;
+  .sandwich a{
+    text-decoration: none;
+    font-weight: 700;
     color: var(--main-text-color);
   }
-  
-  /* 按鈕樣式 */
-  .contact-button {
+  .product_intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .product_intro .product_title{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  .contact_button {
     margin-top: 10px;
     display: inline-block;
     padding: 10px 30px;
@@ -78,20 +52,19 @@
     border-radius: 50px;
     box-shadow: 0 4px 6px var(--shadow-color);
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+    border: none;
   }
   
-  .contact-button:hover {
+  .contact_button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 10px var(--hover-shadow-color);
   }
   
-  .contact-button:active {
+  .contact_button:active {
     transform: translateY(0);
     box-shadow: 0 4px 6px var(--shadow-color);
   }
-  
-  /* 代工類別區塊 */
-  .category-section {
+.category-section {
     text-align: center;
     background-color: var(--white);
     padding: 40px 20px;
@@ -155,15 +128,28 @@
   .category-info p {
     font-size: 0.9rem;
   }
-  
-  /* Map 區塊 */
-  .map-section {
-    margin-bottom: 20px;
+  @keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* 從下方移入 */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
   }
-  
-  .map {
-    width: 100%;
-    height: 450px;
-    border: 0;
+.fade-in-up {
+  opacity: 0; /* 初始狀態 */
+  animation: fadeInUp 0.8s ease-out;
+  animation-fill-mode: forwards; /* 確保動畫結束時保持最終狀態 */
+}
+
+.body1{
+    width: 1200px;
+    margin: 0 auto;
+    padding:   30px 0 40px 0;
   }
-  
+  .body1 .product_title{
+    font-size: 2rem;
+    font-weight: bolder;    
+  }

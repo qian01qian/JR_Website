@@ -11,8 +11,11 @@
     width: 1200px;
     margin: 0 auto;
     padding:   30px 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
-  .body1 .promise_title{
+  .body1 .sop_title{
     font-size: 2rem;
     font-weight: bolder;    
   }
@@ -45,22 +48,11 @@
 }
 
 
-
-
-  .container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-    .promise_image{
-    width: 800px;
-    display: flex;
-    justify-content: center;
-
-  }
-  .promise_content{
-    font-size: 1.3rem;
-    color: var(--light-text-color);
-    padding: 20px 10px;
-  }
+.sop_image {
+    width: 900px; /* 設定圖片寬度 */
+    max-width: 100%; /* 確保圖片在小螢幕上自適應 */
+    margin: 0 auto; /* 使用 auto 使圖片水平置中 */
+    display: block; /* 確保圖片為塊級元素 */
+    text-align: center; /* 確保圖片的內部元素居中 */
+}
 
