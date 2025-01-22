@@ -48,8 +48,8 @@
 }
 
 
-.sop_image {
-    width: 900px; /* 設定圖片寬度 */
+.sop {
+    width: 1000px; /* 設定圖片寬度 */
     max-width: 100%; /* 確保圖片在小螢幕上自適應 */
     margin: 0 auto; /* 使用 auto 使圖片水平置中 */
     display: block; /* 確保圖片為塊級元素 */
