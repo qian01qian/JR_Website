@@ -40,8 +40,8 @@ header, footer {
     display: flex;
     flex-wrap: nowrap; /* 自動換行，避免內容過多時溢出 */
     margin-top: 20px;
-    font-size: 16px;
-    gap: 120px; /* 增加區塊間距 */
+    font-size: 22px;
+    gap: 100px; /* 增加區塊間距 */
     justify-content: space-between; /* 分布內容，使每部分均勻排列 */
     margin-left: 100px;
 }
@@ -59,14 +59,14 @@ header, footer {
 }
 .sec1_title a, .sec2_title a, .sec3_title a, .sec4_title a {
     color: #fafafa; /* 標題文字顏色 */
-    font-size: 16px; /* 標題字體大小 */
+    font-size: 25px; /* 標題字體大小 */
     font-weight: 500; /* 中等字重 */
     text-decoration: none; /* 移除下劃線 */
 }
 .sec1_content a, .sec2_content a, .sec3_content a, .sec4_content a {
     color: #dcdcdc; /* 柔和的文字顏色 */
     text-decoration: none; /* 移除下劃線 */
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .sec1_content a:hover, .sec2_content a:hover, .sec3_content a:hover, .sec4_content a:hover {
