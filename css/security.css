@@ -49,10 +49,18 @@
 
 
 .security_image {
-    width: 900px; /* 設定圖片寬度 */
+    width: 1000px; /* 設定圖片寬度 */
     max-width: 100%; /* 確保圖片在小螢幕上自適應 */
     margin: 0 auto; /* 使用 auto 使圖片水平置中 */
     display: block; /* 確保圖片為塊級元素 */
     text-align: center; /* 確保圖片的內部元素居中 */
 }
 
+.security_image img {
+  width: 800px; /* 設定圖片寬度 */
+  max-width: 100%; /* 在小螢幕上保持自適應 */
+  height: auto; /* 確保圖片比例正確 */
+  display: block; /* 確保圖片為塊級元素 */
+  text-align: center; /* 確保圖片的內部元素居中 */
+  margin: 0 auto; /* 使用 auto 使圖片水平置中 */
+}
