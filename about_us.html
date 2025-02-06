@@ -7,39 +7,59 @@
     <link rel="shortcut icon" href="icon.ico">
     <link rel="stylesheet" href="css/about_us.css">
 </head>
-<body>s
+<body>
+
+    <!-- header -->
     <div id="header"></div>
     <script>
         fetch('header.html')
-        .then(respose => respose.text())
-        .then(data => document.getElementById('header').innerHTML = data);
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
     </script>
-    
+
+    <!-- content -->
     <div class="body1 fade-in-up">
-        <h2 class="about_us_title fade-in-up">關於晢瑞</h2>
+        <!-- <h2 class="about_us_title fade-in-up">關於晢瑞</h2> -->
+
         <div class="sandwich fade-in-up">
             <p><a href="index.html">首頁</a> > 認識晢瑞 > 公司簡介</p>
         </div>
+
         <div class="container1 fade-in-up">
             <img src="res/about_us_image.jpeg" alt="晢瑞廠房" class="image1">
+
             <div class="text1 fade-in-up">
-                <p>晢瑞實業有限公司是一家位於桃園市平鎮區的專業電子代工廠，成立於2021年8月，擁有NT$300萬資本額及800坪（約2600平方公尺）的廠房，員工約25人。<br><br>我們專注於提供電子產品插件（DIP）、組裝、測試、維修及各式產品包裝等完整代工服務，並於2025年取得ISO 9001認證。雖然成立時間較短，但公司核心團隊擁有超過20年的生產製程豐富經驗，能為客戶提供高效率、高品質的電子代工解決方案。<br><br>我們的業務範疇涵蓋多種產品類別，包括頭戴式耳機、監視器、觸控螢幕、網通設備（如路由器和交換機）、硬碟抽取盒及道路警示器等。我們同時提供生活用品的組裝與包裝服務，滿足客戶多樣化的需求。晢瑞實業致力於以專業的技術，為客戶帶來可靠的代工服務。無論是什麼需求，我們都能以靈活的生產流程和嚴謹的品管，確保產品的穩定性和可靠性。</p>
+                <p>
+                    晢瑞實業有限公司是一家位於桃園市平鎮區的專業電子代工廠，成立於 2021 年 8 月，
+                    擁有 NT$300 萬資本額及 800 坪（約 2600 平方公尺）的廠房，員工約 25 人。<br><br>
+
+                    我們專注於提供電子產品插件（DIP）、組裝、測試、維修及各式產品包裝等完整代工服務，
+                    並於 2025 年取得 ISO 9001 認證。雖然成立時間較短，但公司核心團隊擁有超過 20 年的
+                    生產製程豐富經驗，能為客戶提供高效率、高品質的電子代工解決方案。<br><br>
+
+                    我們的業務範疇涵蓋多種產品類別，包括頭戴式耳機、監視器、觸控螢幕、網通設備
+                    （如路由器和交換機）、硬碟抽取盒及道路警示器等。我們同時提供生活用品的組裝
+                    與包裝服務，滿足客戶多樣化的需求。晢瑞實業致力於以專業的技術，為客戶帶來
+                    可靠的代工服務。無論是什麼需求，我們都能以靈活的生產流程和嚴謹的品管，
+                    確保產品的穩定性和可靠性。
+                </p>
             </div>
         </div>
-    
     </div>
 
-    
+    <!-- footer -->
     <div id="footer"></div>
     <script>
         fetch('footer.html')
-        .then(respose => respose.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
-        </script>
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 
+    <!-- scripts -->
     <script src="js/about_us.js"></script>
-    <script src="js/header.js"defer></script>
-    <script src="js/footer.js"defer></script>
+    <script src="js/header.js" defer></script>
+    <script src="js/footer.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 </html>
