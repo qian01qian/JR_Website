@@ -8,22 +8,32 @@
     <link rel="stylesheet" href="css/product.css">
 </head>
 <body>
+
+    <!-- header -->
     <div id="header"></div>
     <script>
         fetch('header.html')
-        .then(respose => respose.text())
-        .then(data => document.getElementById('header').innerHTML = data);
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
     </script>
-    
+
+    <!-- content -->
     <div class="body1 fade-in-up">
         <h2 class="product_title fade-in-up">生產產品系列</h2>
+
         <div class="sandwich fade-in-up">
-            <p><a href="index.html">首頁</a>  > 產品 & 專業 > 生產產品系列</p>
+            <p><a href="index.html">首頁</a> > 產品 & 專業 > 生產產品系列</p>
         </div>
+
         <div class="container fade-in-up">
             <section class="category-section">
                 <h2 class="category-title">代工類別</h2>
-                <p class="category-subtitle">我們專注於提供<br>電子產品插件（DIP）、組裝、測試、維修及各式產品包裝等<br>代工服務</p>
+                <p class="category-subtitle">
+                    我們專注於提供<br>
+                    電子產品插件（DIP）、組裝、測試、維修及各式產品包裝等<br>
+                    代工服務
+                </p>
+
                 <div class="category-container">
                     <div class="category-card">
                         <img src="res/Homepage/headphone.jpg" alt="頭戴式耳機" class="category-image">
@@ -32,13 +42,15 @@
                             <p>高品質耳機組包裝代工及測試</p>
                         </div>
                     </div>
+
                     <div class="category-card">
-                        <img src="res/Homepage/dip.jpg" alt="DIP" class="category-image"> 
+                        <img src="res/Homepage/dip.jpg" alt="DIP" class="category-image">
                         <div class="category-info">
                             <h3>DIP</h3>
                             <p>專業DIP插件</p>
                         </div>
                     </div>
+
                     <div class="category-card">
                         <img src="res/Homepage/cctv.png" alt="監視器" class="category-image">
                         <div class="category-info">
@@ -46,6 +58,7 @@
                             <p>各類監視器設備</p>
                         </div>
                     </div>
+
                     <div class="category-card">
                         <img src="res/Homepage/monitor.jpg" alt="觸控螢幕" class="category-image">
                         <div class="category-info">
@@ -53,6 +66,7 @@
                             <p>觸控螢幕組包測</p>
                         </div>
                     </div>
+
                     <div class="category-card">
                         <img src="res/Homepage/wifi.png" alt="網通消費性產品" class="category-image">
                         <div class="category-info">
@@ -60,6 +74,7 @@
                             <p>路由器、交換機等產品代工</p>
                         </div>
                     </div>
+
                     <div class="category-card">
                         <img src="res/Homepage/bowl.png" alt="生活用品包裝" class="category-image">
                         <div class="category-info">
@@ -67,6 +82,7 @@
                             <p>碗筷包裝、各類生活用品組包裝</p>
                         </div>
                     </div>
+
                     <div class="category-card">
                         <img src="res/Homepage/hdd.png" alt="HDD抽取盒" class="category-image">
                         <div class="category-info">
@@ -74,6 +90,7 @@
                             <p>硬碟抽取盒精密代工</p>
                         </div>
                     </div>
+
                     <div class="category-card">
                         <img src="res/Homepage/warning.png" alt="道路警示器" class="category-image">
                         <div class="category-info">
@@ -84,20 +101,27 @@
                 </div>
             </section>
         </div>
+
         <div class="product_intro">
-            <h2 class="product_title fade-in-up">我們的專業包含以上的系列但不限於以上內容，歡迎來電或親自蒞臨晢瑞</h2>
+            <h2 class="product_title fade-in-up">
+                我們的專業包含以上的系列但不限於以上內容，歡迎聯絡我們
+            </h2>
             <a href="contact.html" class="contact_button fade-in-up">聯絡我們</a>
         </div>
     </div>
+
+    <!-- footer -->
     <div id="footer"></div>
     <script>
         fetch('footer.html')
-        .then(respose => respose.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
-        </script>
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 
-    <script src="js/header.js"defer></script>
-    <script src="js/footer.js"defer></script>
+    <!-- scripts -->
+    <script src="js/header.js" defer></script>
+    <script src="js/footer.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 </html>

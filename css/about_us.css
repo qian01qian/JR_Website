@@ -1,45 +1,53 @@
 :root {
-    --main-bg-color: #a1b7df;
-    --main-text-color: #000;
-    --light-text-color: #666;
-    --white: #fff;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-    --hover-shadow-color: rgba(0, 0, 0, 0.3);
-    --transition-duration: 0.2s;
-  }
-  .body{
-    background-color: var(--main-bg-color);
-  }
-  .body1{
-    max-width: 1200px;
-    margin: 0 auto;
-    padding:   30px 0 40px 0;
-  }
-  .body1 .about_us_title{
-    font-size: 2rem;
-    font-weight: bolder;    
-  }
-  .sandwich{
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px 30px;
-    margin-bottom: 5px;
-  }
-  .sandwich a{
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--main-text-color);
-  }
-  .container1 .image1{
-    width: 100%;
-  }
-  .container1 .text1{
-    font-size: 1.3rem;
-    color: var(--light-text-color);
-    padding: 20px 10px;
-  }
+  --main-bg-color: #a1b7df;
+  --main-text-color: #000;
+  --light-text-color: #666;
+  --white: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --hover-shadow-color: rgba(0, 0, 0, 0.3);
+  --transition-duration: 0.2s;
+}
 
-  /* 定義淡入和上移動畫 */
+.body {
+  background-color: var(--main-bg-color);
+}
+
+.body1 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 0 40px 0;
+}
+
+.body1 .about_us_title {
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.sandwich {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 30px;
+  margin-bottom: 5px;
+  margin-top: 60px;
+}
+
+.sandwich a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--main-text-color);
+}
+
+.container1 .image1 {
+  width: 100%;
+}
+
+.container1 .text1 {
+  font-size: 1.3rem;
+  color: var(--light-text-color);
+  padding: 20px 10px;
+}
+
+/* 定義淡入和上移動畫 */
 @keyframes fadeInUp {
   0% {
       opacity: 0;
@@ -58,3 +66,78 @@
   animation-fill-mode: forwards; /* 確保動畫結束時保持最終狀態 */
 }
 
+/* ========== ✅ RWD 斷點設定 ✅ ========== */
+
+/* 📱 手機版：0px – 767px */
+@media screen and (max-width: 767px) {
+  .body1 {
+      padding: 20px 10px;
+  }
+
+  .body1 .about_us_title {
+      font-size: 1.5rem;
+      text-align: center;
+  }
+
+  .sandwich {
+      justify-content: center;
+      padding: 10px;
+  }
+
+  .container1 .text1 {
+      font-size: 1rem;
+      padding: 15px 5px;
+  }
+}
+
+/* 📲 平板小版：768px – 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .body1 {
+      max-width: 900px;
+  }
+
+  .body1 .about_us_title {
+      font-size: 1.8rem;
+  }
+
+  .container1 .text1 {
+      font-size: 1.1rem;
+  }
+}
+
+/* 💻 平板大版：1024px – 1199px */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .body1 {
+      max-width: 1100px;
+  }
+
+  .body1 .about_us_title {
+      font-size: 2rem;
+  }
+
+  .container1 .text1 {
+      font-size: 1.2rem;
+  }
+}
+
+/* 🖥️ 桌機小版：1200px – 1399px */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .body1 {
+      max-width: 1200px;
+  }
+
+  .container1 .text1 {
+      font-size: 1.3rem;
+  }
+}
+
+/* 🖥️✨ 桌機大版：1400px 以上 */
+@media screen and (min-width: 1400px) {
+  .body1 {
+      max-width: 1400px;
+  }
+
+  .container1 .text1 {
+      font-size: 1.4rem;
+  }
+}

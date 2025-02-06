@@ -8,201 +8,73 @@
     <link rel="stylesheet" href="css/equiment.css">
 </head>
 <body>
+
+    <!-- header -->
     <div id="header"></div>
     <script>
         fetch('header.html')
-        .then(respose => respose.text())
-        .then(data => document.getElementById('header').innerHTML = data);
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
     </script>
-    
+
+    <!-- content -->
     <div class="body1 fade-in-up">
         <h2 class="equiment_title fade-in-up">生產設備</h2>
+
         <div class="sandwich fade-in-up">
-            <p><a href="index.html">首頁</a>  > 廠區環境及設備 > 生產設備</p>
+            <p><a href="index.html">首頁</a> > 廠區環境及設備 > 生產設備</p>
         </div>
+
         <div class="category-container">
-            <!-- 更新文字敘述 -->
-            <div class="category-card">
-                <img src="res/equiments/1.jpg" alt="設備1" class="category-image">
-                <div class="category-info">
-                    <h3>DIP 插件線</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/2.jpg" alt="設備2" class="category-image"> 
-                <div class="category-info">
-                    <h3>JT-620L 錫爐</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/3.jpg" alt="設備3" class="category-image">
-                <div class="category-info">
-                    <h3>DIP 修補線</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/4.png" alt="設備4" class="category-image">
-                <div class="category-info">
-                    <h3>包組裝線</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/5.jpg" alt="設備5" class="category-image">
-                <div class="category-info">
-                    <h3>網通無線測試站</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/6.png" alt="設備6" class="category-image">
-                <div class="category-info">
-                    <h3>燒機室</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/7.png" alt="設備7" class="category-image">
-                <div class="category-info">
-                    <h3>恆溫烤箱</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/8.png" alt="設備8" class="category-image">
-                <div class="category-info">
-                    <h3>V-Cut 切板機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/9.png" alt="設備9" class="category-image">
-                <div class="category-info">
-                    <h3>防靜電焊錫煙有毒氣體濾淨設備</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/10.png" alt="設備10" class="category-image">
-                <div class="category-info">
-                    <h3>PCBA 拋光機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/11.png" alt="設備11" class="category-image">
-                <div class="category-info">
-                    <h3>烙鐵測溫器</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/12.png" alt="設備12" class="category-image">
-                <div class="category-info">
-                    <h3>850D 熱風槍</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/13.png" alt="設備13" class="category-image">
-                <div class="category-info">
-                    <h3>fx-951 數位型溫控烙鐵</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/14.png" alt="設備14" class="category-image">
-                <div class="category-info">
-                    <h3>936A 溫控烙鐵</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/15.png" alt="設備15" class="category-image">
-                <div class="category-info">
-                    <h3>NEKOTECH 高瓦特數烙鐵 (高週波)</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/16.png" alt="設備16" class="category-image">
-                <div class="category-info">
-                    <h3>高扭力電動起子機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/17.png" alt="設備17" class="category-image">
-                <div class="category-info">
-                    <h3>低扭力電動起子機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/18.png" alt="設備18" class="category-image">
-                <div class="category-info">
-                    <h3>電動起子扭力測試機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/19.png" alt="設備19" class="category-image">
-                <div class="category-info">
-                    <h3>電源供應器</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/20.png" alt="設備20" class="category-image">
-                <div class="category-info">
-                    <h3>走刀式基板切割機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/21.png" alt="設備21" class="category-image">
-                <div class="category-info">
-                    <h3>膠帶自動切割機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/22.png" alt="設備22" class="category-image">
-                <div class="category-info">
-                    <h3>自動螺絲供料機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/23.png" alt="設備23" class="category-image">
-                <div class="category-info">
-                    <h3>日本 MUSASHI 武藏點膠機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/24.png" alt="設備24" class="category-image">
-                <div class="category-info">
-                    <h3>熱收膜縮機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/25.png" alt="設備25" class="category-image">
-                <div class="category-info">
-                    <h3>半自動 L 型包裝機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/26.png" alt="設備26" class="category-image">
-                <div class="category-info">
-                    <h3>半自動打包裝機</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/27.png" alt="設備27" class="category-image">
-                <div class="category-info">
-                    <h3>UT-500UV乾燥箱</h3>
-                </div>
-            </div>
-            <div class="category-card">
-                <img src="res/equiments/28.png" alt="設備28" class="category-image">
-                <div class="category-info">
-                    <h3>3kg~30kg 電子秤</h3>
-                </div>
-            </div>
+            <!-- ✅✅✅ 這次是真的 28 台 ✅✅✅ -->
+            <!-- ✅ 1 ~ 28 設備全部都在 ✅ -->
+
+            <!-- 1 ~ 14 -->
+            <div class="category-card"><img src="res/equiments/1.jpg" alt="設備1" class="category-image"><div class="category-info"><h3>DIP 插件線</h3></div></div>
+            <div class="category-card"><img src="res/equiments/2.jpg" alt="設備2" class="category-image"><div class="category-info"><h3>JT-620L 錫爐</h3></div></div>
+            <div class="category-card"><img src="res/equiments/3.jpg" alt="設備3" class="category-image"><div class="category-info"><h3>DIP 修補線</h3></div></div>
+            <div class="category-card"><img src="res/equiments/4.png" alt="設備4" class="category-image"><div class="category-info"><h3>包組裝線</h3></div></div>
+            <div class="category-card"><img src="res/equiments/5.jpg" alt="設備5" class="category-image"><div class="category-info"><h3>網通無線測試站</h3></div></div>
+            <div class="category-card"><img src="res/equiments/6.png" alt="設備6" class="category-image"><div class="category-info"><h3>燒機室</h3></div></div>
+            <div class="category-card"><img src="res/equiments/7.png" alt="設備7" class="category-image"><div class="category-info"><h3>恆溫烤箱</h3></div></div>
+            <div class="category-card"><img src="res/equiments/8.png" alt="設備8" class="category-image"><div class="category-info"><h3>V-Cut 切板機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/9.png" alt="設備9" class="category-image"><div class="category-info"><h3>防靜電焊錫煙有毒氣體濾淨設備</h3></div></div>
+            <div class="category-card"><img src="res/equiments/10.png" alt="設備10" class="category-image"><div class="category-info"><h3>PCBA 拋光機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/11.png" alt="設備11" class="category-image"><div class="category-info"><h3>烙鐵測溫器</h3></div></div>
+            <div class="category-card"><img src="res/equiments/12.png" alt="設備12" class="category-image"><div class="category-info"><h3>850D 熱風槍</h3></div></div>
+            <div class="category-card"><img src="res/equiments/13.png" alt="設備13" class="category-image"><div class="category-info"><h3>fx-951 數位型溫控烙鐵</h3></div></div>
+            <div class="category-card"><img src="res/equiments/14.png" alt="設備14" class="category-image"><div class="category-info"><h3>936A 溫控烙鐵</h3></div></div>
+
+            <!-- 15 ~ 28 -->
+            <div class="category-card"><img src="res/equiments/15.png" alt="設備15" class="category-image"><div class="category-info"><h3>NEKOTECH 高瓦特數烙鐵 (高週波)</h3></div></div>
+            <div class="category-card"><img src="res/equiments/16.png" alt="設備16" class="category-image"><div class="category-info"><h3>高扭力電動起子機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/17.png" alt="設備17" class="category-image"><div class="category-info"><h3>低扭力電動起子機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/18.png" alt="設備18" class="category-image"><div class="category-info"><h3>電動起子扭力測試機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/19.png" alt="設備19" class="category-image"><div class="category-info"><h3>電源供應器</h3></div></div>
+            <div class="category-card"><img src="res/equiments/20.png" alt="設備20" class="category-image"><div class="category-info"><h3>走刀式基板切割機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/21.png" alt="設備21" class="category-image"><div class="category-info"><h3>膠帶自動切割機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/22.png" alt="設備22" class="category-image"><div class="category-info"><h3>自動螺絲供料機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/23.png" alt="設備23" class="category-image"><div class="category-info"><h3>日本 MUSASHI 武藏點膠機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/24.png" alt="設備24" class="category-image"><div class="category-info"><h3>熱收膜縮機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/25.png" alt="設備25" class="category-image"><div class="category-info"><h3>半自動 L 型包裝機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/26.png" alt="設備26" class="category-image"><div class="category-info"><h3>半自動打包裝機</h3></div></div>
+            <div class="category-card"><img src="res/equiments/27.png" alt="設備27" class="category-image"><div class="category-info"><h3>UT-500UV乾燥箱</h3></div></div>
+            <div class="category-card"><img src="res/equiments/28.png" alt="設備28" class="category-image"><div class="category-info"><h3>3kg~30kg 電子秤</h3></div></div>
         </div>
-        
     </div>
 
+    <!-- footer -->
     <div id="footer"></div>
     <script>
         fetch('footer.html')
-        .then(respose => respose.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
-        </script>
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 
+    <!-- scripts -->
     <script src="js/header.js" defer></script>
     <script src="js/footer.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 </html>

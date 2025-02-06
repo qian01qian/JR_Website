@@ -1,48 +1,54 @@
-/* 全域變數 */
-:root {
-    --main-bg-color: #a1b7df;
-    --main-text-color: #000;
-    --light-text-color: #666;
-    --white: #fff;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-    --hover-shadow-color: rgba(0, 0, 0, 0.3);
-    --transition-duration: 0.2s;
-  }
-  
-  /* Reset 與全域設定 */
-  * {
+/* ───────────────────────
+   全域變數（CSS 變數）
+   ─────────────────────── */
+   :root {
+    --main-bg-color: #a1b7df;           /* 主要背景色 */
+    --main-text-color: #000;            /* 主要文字顏色 */
+    --light-text-color: #666;           /* 淺色文字顏色 */
+    --white: #fff;                      /* 白色 */
+    --shadow-color: rgba(0, 0, 0, 0.2); /* 陰影顏色 */
+    --hover-shadow-color: rgba(0, 0, 0, 0.3); /* 滑鼠懸停時的陰影 */
+    --transition-duration: 0.2s;        /* 動畫過渡時間 */
+}
+
+/* ───────────────────────
+   Reset 與全域設定
+   ─────────────────────── */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  html, body {
+}
+
+html, body {
     width: 100%;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
-  }
-  
-  /* 主要容器設定：置中並限制最大寬度 */
-  .container {
+}
+
+/* 主要內容容器：置中對齊並限制最大寬度 */
+.container {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  
-  /* Header 與 Footer 基本樣式 */
+}
 
-  /* Banner 區塊 */
-  .banner {
+/* ───────────────────────
+   Banner 區塊（大橫幅）
+   ─────────────────────── */
+.banner {
     position: relative;
     margin-bottom: 20px;
-  }
-  
-  .banner_homepage_image {
+}
+
+/* Banner 圖片 */
+.banner_homepage_image {
     width: 100%;
     height: 400px;
     object-fit: cover;
-  }
-  
-  .banner_overlay {
+}
+
+/* 半透明白色遮罩 */
+.banner_overlay {
     position: absolute;
     margin-top: 100px;
     top: 0;
@@ -51,9 +57,10 @@
     height: 400px;
     background-color: rgba(255, 255, 255, 0.65);
     z-index: 1;
-  }
-  
-  .banner_contents {
+}
+
+/* Banner 內文區塊 */
+.banner_contents {
     position: absolute;
     top: 33%;
     margin-top: 200px;
@@ -63,10 +70,12 @@
     text-align: center;
     font-size: 25px;
     color: var(--main-text-color);
-  }
-  
-  /* 按鈕樣式 */
-  .contact-button {
+}
+
+/* ───────────────────────
+   按鈕樣式（共用按鈕）
+   ─────────────────────── */
+.contact-button {
     margin-top: 10px;
     display: inline-block;
     padding: 10px 30px;
@@ -78,47 +87,55 @@
     border-radius: 50px;
     box-shadow: 0 4px 6px var(--shadow-color);
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
-  }
-  
-  .contact-button:hover {
+}
+
+/* 按鈕滑鼠懸停效果 */
+.contact-button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 10px var(--hover-shadow-color);
-  }
-  
-  .contact-button:active {
+}
+
+/* 按鈕點擊效果 */
+.contact-button:active {
     transform: translateY(0);
     box-shadow: 0 4px 6px var(--shadow-color);
-  }
-  
-  /* 代工類別區塊 */
-  .category-section {
+}
+
+/* ───────────────────────
+   代工類別區塊
+   ─────────────────────── */
+.category-section {
     text-align: center;
     background-color: var(--white);
     padding: 40px 20px;
     margin-bottom: 20px;
-  }
-  
-  .category-title {
+}
+
+/* 標題樣式 */
+.category-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .category-subtitle {
+}
+
+.category-subtitle {
     font-size: 1.2rem;
     color: var(--light-text-color);
     margin-bottom: 30px;
-  }
-  
-  /* 代工卡片區塊 */
-  .category-container {
+}
+
+/* ───────────────────────
+   代工卡片樣式
+   ─────────────────────── */
+.category-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
-  }
-  
-  .category-card {
+}
+
+/* 單張卡片 */
+.category-card {
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow-color);
@@ -126,44 +143,248 @@
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
-  }
-  
-  .category-card:hover {
+}
+
+/* 滑鼠懸停時的動畫效果 */
+.category-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px var(--hover-shadow-color);
-  }
-  
-  .category-image {
+}
+
+/* 卡片圖片 */
+.category-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
-  }
-  
-  .category-info {
+}
+
+/* 卡片內文字內容 */
+.category-info {
     padding: 15px;
     height: 88px;
     background-color: var(--main-bg-color);
     color: var(--white);
     text-align: left;
-  }
-  
-  .category-info h3 {
+}
+
+/* 卡片標題 */
+.category-info h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-  }
-  
-  .category-info p {
+}
+
+/* 卡片內文字 */
+.category-info p {
     font-size: 0.9rem;
-  }
-  
-  /* Map 區塊 */
-  .map-section {
+}
+
+/* ───────────────────────
+   Map（地圖區塊）
+   ─────────────────────── */
+.map-section {
     margin-bottom: 20px;
-  }
-  
-  .map {
+}
+
+/* Google 地圖嵌入樣式 */
+.map {
     width: 100%;
     height: 450px;
     border: 0;
-  }
-  
+}
+
+.category-subtitle_mobile {
+  display:none;
+}
+
+/* ───────────────────────
+   RWD 斷點設定
+   ─────────────────────── */
+
+/* ─────────────────────────
+   📌 手機版：0px - 767px
+   ───────────────────────── */
+   @media screen and (max-width: 767px) {
+    
+    /* ⚡ 讓所有文字縮小並不換行 */
+    body {
+        font-size: 14px; /* 整體縮小 */
+        white-space: nowrap;
+    }
+        .category-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 兩列 */
+        gap: 20px;
+        justify-items: center;
+    }
+    .banner_contents {
+        font-size: 18px;
+    }
+
+    .category-title {
+        font-size: 1.6rem;
+    }
+
+    .category-subtitle {
+      display: none;
+    }
+    .category-subtitle_mobile {
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .category-info h3 {
+        font-size: 1rem;
+    }
+
+    .category-info p {
+        font-size: 0.8rem;
+    }
+
+    .contact-button {
+        font-size: 16px;
+    }
+}
+
+/* ─────────────────────────
+   📌 小平板：768px - 1023px
+   ───────────────────────── */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    /* ⚡ 文字稍微放大，但仍不換行 */
+    body {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+    .banner_contents {
+        font-size: 20px;
+    }
+
+    .category-title {
+        font-size: 1.8rem;
+    }
+
+    .category-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .category-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .category-info p {
+        font-size: 0.9rem;
+    }
+
+    .contact-button {
+        font-size: 18px;
+    }
+}
+
+/* ─────────────────────────
+   📌 大平板：1024px - 1199px
+   ───────────────────────── */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    
+    /* ⚡ 文字適中，不換行 */
+    body {
+        font-size: 18px;
+        white-space: nowrap;
+    }
+
+    .banner_contents {
+        font-size: 22px;
+    }
+
+    .category-title {
+        font-size: 2rem;
+    }
+
+    .category-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .category-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .category-info p {
+        font-size: 1rem;
+    }
+
+    .contact-button {
+        font-size: 20px;
+    }
+}
+
+/* ─────────────────────────
+   📌 小桌機：1200px - 1399px
+   ───────────────────────── */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    /* ⚡ 讓桌機版字體適中，保持不換行 */
+    body {
+        font-size: 20px;
+        white-space: nowrap;
+    }
+
+    .banner_contents {
+        font-size: 24px;
+    }
+
+    .category-title {
+        font-size: 2.2rem;
+    }
+
+    .category-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .category-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .category-info p {
+        font-size: 1.1rem;
+    }
+
+    .contact-button {
+        font-size: 22px;
+    }
+}
+
+/* ─────────────────────────
+   📌 大桌機：1400px 以上
+   ───────────────────────── */
+@media screen and (min-width: 1400px) {
+
+    /* ⚡ 大桌機讓字體較大，但仍保持不換行 */
+    body {
+        font-size: 22px;
+        white-space: nowrap;
+    }
+
+    .banner_contents {
+        font-size: 26px;
+    }
+
+    .category-title {
+        font-size: 2.5rem;
+    }
+
+    .category-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .category-info h3 {
+        font-size: 1.7rem;
+    }
+
+    .category-info p {
+        font-size: 1.2rem;
+    }
+
+    .contact-button {
+        font-size: 24px;
+    }
+}

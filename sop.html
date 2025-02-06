@@ -8,33 +8,40 @@
     <link rel="stylesheet" href="css/sop.css">
 </head>
 <body>
+
+    <!-- header -->
     <div id="header"></div>
     <script>
         fetch('header.html')
-        .then(respose => respose.text())
-        .then(data => document.getElementById('header').innerHTML = data);
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
     </script>
-    
+
+    <!-- content -->
     <div class="body1 fade-in-up">
         <h2 class="sop_title fade-in-up">生產流程</h2>
+
         <div class="sandwich fade-in-up">
-            <p><a href="index.html">首頁</a>  > 產品 & 專業 > 生產流程</p>
+            <p><a href="index.html">首頁</a> > 產品 & 專業 > 生產流程</p>
         </div>
+
         <div class="sop_image fade-in-up">
             <img src="res/流程圖.svg" alt="生產流程" class="sop">
         </div>
-          
     </div>
 
+    <!-- footer -->
     <div id="footer"></div>
     <script>
         fetch('footer.html')
-        .then(respose => respose.text())
-        .then(data => document.getElementById('footer').innerHTML = data);
-        </script>
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 
-    <script src="js/header.js"defer></script>
-    <script src="js/footer.js"defer></script>
+    <!-- scripts -->
+    <script src="js/header.js" defer></script>
+    <script src="js/footer.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 </html>

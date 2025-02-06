@@ -1,44 +1,143 @@
 <header class="header">
-    <link rel="stylesheet" href="css/header.css">
-    <!-- 如果 hover 效果已滿足需求，就不必用 js 控制下拉選單了 -->
-    <div class="background"></div>
-    <div class="header_index">
-        <div class="header_logo">
-            <a href="index.html" class="jr_homepage">
-                <img src="res/Full_Logo.jpeg" alt="晢瑞實業有限公司Logo" width="200">
-            </a>
-        </div>
-        <div class="index">
-            <div class="dropdown">
-                <!-- 加上 trigger class，整塊都是 hover 觸發區 -->
-                <h4 href="about_us.html" class="trigger header_about_us" alt="認識晢瑞">認識晢瑞</h4>
-                <div class="dropdown-menu">
-                    <a href="about_us.html">公司簡介</a>
-                    <a href="promise.html">經營理念</a>
-                    <a href="org.html">組織圖</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <h4 class="trigger header_product" alt="產品＆專業">產品＆專業</h4>
-                <div class="dropdown-menu">
-                    <a href="product.html">生產產品系列</a>
-                    <a href="sop.html">生產流程</a>
-                    <a href="security.html">產品保全及保險</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <h4 class="trigger header_envionment" alt="廠區環境及設備">廠區環境及設備</h4>
-                <div class="dropdown-menu">
-                    <a href="env.html#environment">廠區環境</a>
-                    <a href="equiment.html">生產設備</a>
-                </div>
-            </div>
-            <div class="dropdown">
-                <h4 href="contact.html" class="trigger header_contact" alt="聯絡我們">聯絡我們</h4>
-                <div class="dropdown-menu">
-                    <a href="contact.html#method">聯絡方式</a>
-                </div>
-            </div>
-        </div>
+  <link rel="stylesheet" href="css/header.css">
+  
+  <!-- 背景區塊 -->
+  <div class="background"></div>
+
+  <div class="header_index">
+    <!-- Logo 區塊 -->
+    <div class="header_logo">
+      <a href="index.html" class="jr_homepage">
+        <img src="res/Full_Logo.jpeg" alt="晢瑞實業有限公司Logo" class="logo">
+      </a>
     </div>
+
+    <!-- 桌機版導覽列 -->
+    <div class="index">
+      <div class="dropdown">
+        <h4 class="trigger header_about_us" alt="認識晢瑞">認識晢瑞</h4>
+        <div class="dropdown-menu">
+          <a href="about_us.html">公司簡介</a>
+          <a href="promise.html">經營理念</a>
+          <a href="org.html">組織圖</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <h4 class="trigger header_product" alt="產品＆專業">產品＆專業</h4>
+        <div class="dropdown-menu">
+          <a href="product.html">生產產品系列</a>
+          <a href="sop.html">生產流程</a>
+          <a href="security.html">產品保全及保險</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <h4 class="trigger header_envionment" alt="廠區環境及設備">廠區環境及設備</h4>
+        <div class="dropdown-menu">
+          <a href="env.html#environment">廠區環境</a>
+          <a href="equiment.html">生產設備</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <h4 class="trigger header_contact" alt="聯絡我們">聯絡我們</h4>
+        <div class="dropdown-menu">
+          <a href="contact.html#method">聯絡方式</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 手機版：新增隱藏的 checkbox 控制選單開合 -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+    <!-- 漢堡按鈕 label (僅在手機版顯示) -->
+    <label for="menu-toggle" class="hamburger-label">
+      <img src="res/選單.svg" alt="選單圖示">
+    </label>
+    
+    <!-- 手機版選單內容 -->
+    <div class="hamburger_menu">
+      <div class="hamburger_menu_content">
+        <!-- 認識晢瑞 區塊 -->
+        <!-- 隱藏的折疊開關，用於控制「認識晢瑞」選單的展開與收起 -->
+        <input type="checkbox" id="collapse-about" class="collapse-toggle" />
+        <!-- 折疊標題：點擊後展開子選單，純文字，不作連結 -->
+        <label for="collapse-about" class="collapse-label">認識晢瑞</label>
+        <!-- 子選單列表 -->
+        <ul class="hamburger_small collapse-content">
+          <li>
+            <label for="menu-toggle">
+              <a href="about_us.html">公司簡介</a>
+            </label>
+          </li>
+          <li>
+            <label for="menu-toggle">
+              <a href="promise.html">經營理念</a>
+            </label>
+          </li>
+          <li>
+            <label for="menu-toggle">
+              <a href="org.html">組織圖</a>
+            </label>
+          </li>
+        </ul>
+      
+        <!-- 產品＆專業 區塊 -->
+        <input type="checkbox" id="collapse-product" class="collapse-toggle" />
+        <label for="collapse-product" class="collapse-label">產品＆專業</label>
+        <ul class="hamburger_small collapse-content">
+          <li>
+            <label for="menu-toggle">
+              <a href="product.html">生產產品系列</a>
+            </label>
+          </li>
+          <li>
+            <label for="menu-toggle">
+              <a href="sop.html">生產流程</a>
+            </label>
+          </li>
+          <li>
+            <label for="menu-toggle">
+              <a href="security.html">產品保全及保險</a>
+            </label>
+          </li>
+        </ul>
+      
+        <!-- 廠區環境及設備 區塊 -->
+        <input type="checkbox" id="collapse-environment" class="collapse-toggle" />
+        <label for="collapse-environment" class="collapse-label">廠區環境及設備</label>
+        <ul class="hamburger_small collapse-content">
+          <li>
+            <label for="menu-toggle">
+              <a href="env.html#environment">廠區環境</a>
+            </label>
+          </li>
+          <li>
+            <label for="menu-toggle">
+              <a href="equiment.html">生產設備</a>
+            </label>
+          </li>
+        </ul>
+      
+        <!-- 聯絡我們 區塊 -->
+        <input type="checkbox" id="collapse-contact" class="collapse-toggle" />
+        <label for="collapse-contact" class="collapse-label">聯絡我們</label>
+        <ul class="hamburger_small collapse-content">
+          <li>
+            <label for="menu-toggle">
+              <a href="contact.html#method">聯絡方式</a>
+            </label>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+    
+    <!-- 覆蓋層：點擊空白處關閉選單 -->
+    <label for="menu-toggle" class="menu-overlay"></label>
+    
+    <script src="js/header.js"></script>
+  </div>
 </header>
+
+<!-- 其餘頁面內容... -->
