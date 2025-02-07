@@ -135,7 +135,7 @@ html, body {
 }
 
 /* 單張卡片 */
-.category-card {
+.category-card , .carousel-slide {
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow-color);
@@ -159,7 +159,7 @@ html, body {
 }
 
 /* 卡片內文字內容 */
-.category-info {
+.category-info , .slide-info {
     padding: 15px;
     height: 88px;
     background-color: var(--main-bg-color);
@@ -176,6 +176,9 @@ html, body {
 /* 卡片內文字 */
 .category-info p {
     font-size: 0.9rem;
+}
+.carousel-container {
+    display: none;
 }
 
 /* ───────────────────────
@@ -204,20 +207,17 @@ html, body {
    📌 手機版：0px - 767px
    ───────────────────────── */
    @media screen and (max-width: 767px) {
-    
+    .container {
+     max-width: 100%;
+    }
     /* ⚡ 讓所有文字縮小並不換行 */
     body {
         font-size: 14px; /* 整體縮小 */
         white-space: nowrap;
     }
-        .category-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 兩列 */
-        gap: 20px;
-        justify-items: center;
-    }
     .banner_contents {
-        font-size: 18px;
+        font-size:20px;
+        font-weight: 800;
     }
 
     .category-title {
@@ -231,15 +231,74 @@ html, body {
       display: block;
       margin-bottom: 15px;
     }
+    .category-container {
+        display: none;
+      }
+      
+    .carousel-container {
+        display: block;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+      }
+      
+      .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+      }
+      
+      .carousel-slide {
+        min-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 若需要調整卡片間距，可在這裡加 padding 或 margin */
+      }
+      
+      .carousel-slide img {
+        width: 100%;
+        max-width: 350px;  /* 限制卡片內容寬度 */
+        height: 200px;
+        display: block;
+      }
+      .carousel-slide h3 {
+        display: flex;
+        justify-content: center;
+        font-size: 1.2rem;
+        width: 400px;
+      }
+        .carousel-slide p {
+            display: flex;
+            justify-content: center;
+            font-size: 0.9rem;
+            width: 400px;
+        }
+      
 
-    .category-info h3 {
-        font-size: 1rem;
-    }
-
-    .category-info p {
-        font-size: 0.8rem;
-    }
-
+      
+      /* 左右按鈕 */
+      .carousel-button {
+        position: absolute;
+        top: 0%;
+        width: 30%;
+        height: 180%;
+        transform: translateY(-50%);
+        background: rgba(0, 255, 255, 0);
+        color: rgba(0, 0, 0, 0);
+        border: none;
+        font-size: 24px;
+        padding: 10px;
+        cursor: pointer;
+        z-index: 10;
+      }
+      .carousel-button.prev {
+        left: 10px;
+      }
+      .carousel-button.next {
+        right: 10px;
+      }
     .contact-button {
         font-size: 16px;
     }
