@@ -242,6 +242,7 @@ html, body {
         margin: auto;
         overflow: hidden;
         position: relative;
+        
       }
       
       .carousel-inner {
@@ -275,15 +276,16 @@ html, body {
             font-size: 0.9rem;
             width: 400px;
         }
+
       
 
       
       /* 左右按鈕 */
       .carousel-button {
         position: absolute;
-        top: 0%;
+        top: 47%;
         width: 30%;
-        height: 180%;
+        height: 90%;
         transform: translateY(-50%);
         background: rgba(0, 255, 255, 0);
         color: rgba(0, 0, 0, 0);
@@ -314,9 +316,12 @@ html, body {
         font-size: 16px;
         white-space: nowrap;
     }
-
+    .banner_contents_h1{
+        font-weight: 900;
+    }
     .banner_contents {
-        font-size: 20px;
+        font-size: 24px;
+        font-weight: 800;
     }
 
     .category-title {
@@ -328,7 +333,7 @@ html, body {
     }
 
     .category-info h3 {
-        font-size: 1.2rem;
+        font-size: 1.35rem;
     }
 
     .category-info p {
@@ -364,7 +369,7 @@ html, body {
     }
 
     .category-info h3 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .category-info p {
@@ -388,7 +393,8 @@ html, body {
     }
 
     .banner_contents {
-        font-size: 24px;
+        font-size: 28px;
+        font-weight: 800;
     }
 
     .category-title {
@@ -400,7 +406,7 @@ html, body {
     }
 
     .category-info h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .category-info p {
@@ -422,25 +428,25 @@ html, body {
         font-size: 22px;
         white-space: nowrap;
     }
-
     .banner_contents {
-        font-size: 26px;
+        font-size: 30px;
+        font-weight: 800;
     }
 
     .category-title {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .category-subtitle {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .category-info h3 {
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 
     .category-info p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .contact-button {

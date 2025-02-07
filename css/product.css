@@ -1,4 +1,7 @@
-:root {
+/* ───────────────────────
+   全域變數
+   ─────────────────────── */
+   :root {
     --main-bg-color: #a1b7df;
     --main-text-color: #000;
     --light-text-color: #666;
@@ -6,41 +9,49 @@
     --shadow-color: rgba(0, 0, 0, 0.2);
     --hover-shadow-color: rgba(0, 0, 0, 0.3);
     --transition-duration: 0.2s;
-  }
-  
-  /* Reset 與全域設定 */
-  .body1{
+}
+
+/* ───────────────────────
+   Reset 與全域設定
+   ─────────────────────── */
+.body1 {
     width: 1200px;
     margin: 0 auto;
-    padding:   30px 0 40px 0;
-  }
-  .body1 .promise_title{
+    padding: 30px 0 40px 0;
+}
+
+.body1 .promise_title {
     font-size: 2rem;
-    font-weight: bolder;    
-  }
-  .sandwich{
+    font-weight: bolder;
+}
+
+.sandwich {
     display: flex;
     justify-content: flex-end;
     padding: 20px 30px;
     margin-bottom: 5px;
-  }
-  .sandwich a{
+}
+
+.sandwich a {
     text-decoration: none;
     font-weight: 700;
     color: var(--main-text-color);
-  }
-  .product_intro{
+}
+
+.product_intro {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-  .product_intro .product_title{
+}
+
+.product_intro .product_title {
     display: flex;
     justify-content: center;
     align-content: center;
-  }
-  .contact_button {
+}
+
+.contact_button {
     margin-top: 10px;
     display: inline-block;
     padding: 10px 30px;
@@ -53,45 +64,46 @@
     box-shadow: 0 4px 6px var(--shadow-color);
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
     border: none;
-  }
-  
-  .contact_button:hover {
+}
+
+.contact_button:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 10px var(--hover-shadow-color);
-  }
-  
-  .contact_button:active {
+}
+
+.contact_button:active {
     transform: translateY(0);
     box-shadow: 0 4px 6px var(--shadow-color);
-  }
+}
+
 .category-section {
     text-align: center;
     background-color: var(--white);
     padding: 40px 20px;
     margin-bottom: 20px;
-  }
-  
-  .category-title {
+}
+
+.category-title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
-  }
-  
-  .category-subtitle {
+}
+
+.category-subtitle {
     font-size: 1.2rem;
     color: var(--light-text-color);
     margin-bottom: 30px;
-  }
-  
-  /* 代工卡片區塊 */
-  .category-container {
+}
+
+/* 代工卡片區塊 */
+.category-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     gap: 20px;
-  }
-  
-  .category-card {
+}
+
+.category-card {
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: 0 4px 8px var(--shadow-color);
@@ -99,57 +111,186 @@
     width: 300px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin-bottom: 20px;
-  }
-  
-  .category-card:hover {
+}
+
+.category-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px var(--hover-shadow-color);
-  }
-  
-  .category-image {
+}
+
+.category-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
-  }
-  
-  .category-info {
+}
+
+.category-info {
     padding: 15px;
     height: 88px;
     background-color: var(--main-bg-color);
     color: var(--white);
     text-align: left;
-  }
-  
-  .category-info h3 {
+}
+
+.category-info h3 {
     font-size: 1.2rem;
     margin-bottom: 10px;
-  }
-  
-  .category-info p {
+}
+
+.category-info p {
     font-size: 0.9rem;
+}
+
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* 從下方移入 */
   }
-  @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* 從下方移入 */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
+}
 .fade-in-up {
   opacity: 0; /* 初始狀態 */
   animation: fadeInUp 0.8s ease-out;
-  animation-fill-mode: forwards; /* 確保動畫結束時保持最終狀態 */
+  animation-fill-mode: forwards; /* 動畫結束後保持狀態 */
 }
 
-.body1{
+.body1 {
     width: 1200px;
     margin: 0 auto;
-    padding:   30px 0 40px 0;
-  }
-  .body1 .product_title{
+    padding: 30px 0 40px 0;
+}
+
+.body1 .product_title {
     font-size: 2rem;
-    font-weight: bolder;    
+    font-weight: bolder;
+}
+
+.category-subtitle_mobile {
+    display: none;
+}
+.carousel-container {
+    display: none;
+}
+
+
+/* 📱 手機版 (0px – 767px) */
+@media screen and (max-width: 767px) {
+  .body1 {
+    max-width:350px;
+    padding: 20px 10px;
   }
+  .category-title{
+   margin-top: 0;
+  }  
+  .category-subtitle{
+    display: none;
+  }
+  .category-subtitle_mobile{
+    display: block;
+    font-size: 1.1rem;
+  }
+  .product_title{
+   display: none;
+  }
+  .sandwich{
+    display: none;
+  }
+  .category-container{
+      display: none;
+    }
+  .carousel-container {
+    display: block;
+  }
+
+  .carousel-container {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--main-bg-color);
+    border-radius: 5%;
+  }
+
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .carousel-slide {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 若需要調整卡片間距，可在這裡加 padding 或 margin */
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    max-width: 350px;  /* 限制卡片內容寬度 */
+    height: 200px;
+    display: block;
+  }
+  .carousel-slide h3 {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    width: 400px;
+  }
+    .carousel-slide p {
+        display: flex;
+        justify-content: center;
+        font-size: 0.9rem;
+        width: 400px;
+    }
+
+  
+
+  
+  /* 左右按鈕 */
+  .carousel-button {
+    position: absolute;
+    top: 47%;
+    width: 30%;
+    height: 90%;
+    transform: translateY(-50%);
+    background: rgba(0, 255, 255, 0);
+    color: rgba(0, 0, 0, 0);
+    border: none;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .carousel-button.prev {
+    left: 10px;
+  }
+  .carousel-button.next {
+    right: 10px;
+  }
+}
+
+/* 📲 小平板 (768px – 1023px) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+/* 💻 大平板 (1024px – 1199px) */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+   
+}
+
+/* 🖥️ 小桌機 (1200px – 1399px) */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+   
+}
+
+/* 🖥️✨ 大桌機 (1400px 以上) */
+@media screen and (min-width: 1400px) {
+    
+}

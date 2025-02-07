@@ -1,4 +1,7 @@
-:root {
+/* ───────────────────────
+   全域變數
+   ─────────────────────── */
+   :root {
     --main-bg-color: #a1b7df;
     --main-text-color: #000;
     --light-text-color: #666;
@@ -6,42 +9,83 @@
     --shadow-color: rgba(0, 0, 0, 0.2);
     --hover-shadow-color: rgba(0, 0, 0, 0.3);
     --transition-duration: 0.2s;
-  }
-  .body{
+}
+
+/* ───────────────────────
+   Reset 與全域設定
+   ─────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* ───────────────────────
+   主要內容容器設定：置中並限制最大寬度
+   ─────────────────────── */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ───────────────────────
+   Header 與 Footer 基本樣式（Header 範例）
+   ─────────────────────── */
+
+/* Header 基本樣式 */
+.body {
     background-color: var(--main-bg-color);
-  }
-  .body1{
+}
+
+.body1 {
     width: 1200px;
     margin: 0 auto;
-    padding:   30px 0 40px 0;
-  }
-  .body1 .org_title{
+    padding: 30px 0 40px 0;
+}
+
+/* 組織圖頁面標題 */
+.body1 .org_title {
     font-size: 2rem;
-    font-weight: bolder;    
-  }
-  .sandwich{
+    font-weight: bolder;
+}
+
+/* 麵包屑區塊 */
+.sandwich {
     display: flex;
     justify-content: flex-end;
     padding: 20px 30px;
     margin-bottom: 5px;
-  }
-  .sandwich a{
+}
+
+.sandwich a {
     text-decoration: none;
     font-weight: 700;
     color: var(--main-text-color);
-  }
-  .container{
+}
+
+/* 內容區塊容器，置中 */
+.container {
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-    .org_image{
+}
+
+/* 組織圖圖片 */
+.org_image {
     width: 800px;
     display: flex;
     justify-content: center;
+}
 
-  }
-/* 淡入上移的動畫效果 */
+/* ───────────────────────
+   淡入上移動畫效果
+   ─────────────────────── */
 @keyframes fadeInUp {
   0% {
       opacity: 0;
@@ -55,7 +99,116 @@
 .fade-in-up {
     opacity: 0; /* 初始狀態 */
     animation: fadeInUp 0.8s ease-out;
-    animation-fill-mode: forwards; /* 確保動畫結束時保持最終狀態 */
+    animation-fill-mode: forwards; /* 動畫結束後保持狀態 */
+}
+
+/* ───────────────────────
+   RWD 斷點設定
+   ───────────────────────
+
+
+/* 📱 手機版：0px – 767px */
+@media screen and (max-width: 767px) {
+  .body1 {
+    max-width: 300px;
   }
-  
-  
+  .body1 .org_title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+
+.sandwich {
+  display: none;
+}
+.container img{
+  width: 350px;
+}
+  @media screen and (min-width: 400px) {
+    .container img{
+      width: 400px;
+    }
+  }
+}
+
+/* 📲 小平板：768px – 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .body1 {
+    max-width: 700px;
+  }
+  .body1 .org_title {
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+.container img{
+  width: 600px;
+}
+}
+
+/* 💻 大平板：1024px – 1199px */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  .body1 {
+    max-width: 900px;
+  }
+  .body1 .org_title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 30px; .body1 {
+      max-width: 1100px;
+    }
+    .body1 .org_title {
+      font-size: 2.5rem;
+      font-weight: 900;
+      text-align: center;
+      margin-top:30px;
+      margin-bottom: 30px;
+  }
+  .container img{
+    width: 750px;
+  }
+}
+.container img{
+  width: 800px;
+}
+}
+
+/* 🖥️ 小桌機：1200px – 1399px */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .body1 {
+    max-width: 1100px;
+  }
+  .body1 .org_title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+.container img{
+  width: 750px;
+}
+}
+
+/* 🖥️✨ 大桌機：1400px 以上 */
+@media screen and (min-width: 1400px) {
+  .body1 {
+    max-width: 1200px;
+  }
+  .body1 .org_title {
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top:30px;
+    margin-bottom: 30px;
+}
+.container img{
+  width: 850px;
+}
+}
