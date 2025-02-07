@@ -3,3 +3,36 @@
     margin-right: 50px;
     background-color: white;
 }
+/* ───────────────────────
+   RWD 斷點設定
+   ─────────────────────── */
+
+/* 手機版：0px - 767px */
+@media screen and (max-width: 767px) {
+    /* 這裡可以放手機版的調整 */
+    .body1{
+        margin-left: 0px;
+        margin-right: 0px;
+        background-color: white;
+    }
+}
+
+/* 小平板：768px - 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 這裡可以放小平板的調整 */
+}
+
+/* 大平板：1024px - 1199px */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+    /* 這裡可以放大平板的調整 */
+}
+
+/* 小桌機：1200px - 1399px */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+    /* 這裡可以放小桌機的調整 */
+}
+
+/* 大桌機：1400px 以上 */
+@media screen and (min-width: 1400px) {
+    /* 這裡可以放大桌機的調整 */
+}
