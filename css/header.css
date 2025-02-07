@@ -317,17 +317,63 @@
       }
   }
   @media screen and (min-width: 1024px) and (max-width: 1199px) {
+    .index {
+      display: none;
+    }
+
+
+    /* 顯示漢堡按鈕 label */
+    .hamburger-label {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      z-index: 150;
+    }
+    .hamburger-label img {
+      width: 30px;
+      height: auto;
+    }
+    /* 調整 Logo 大小 */
     .header_logo img.logo {
       margin-top: 5px;
-      width: 190px;
+      width: 150px;
     }
+    /* 手機版漢堡選單內部：固定在頁面右側，尺寸：高度 100vh、寬度 50vw */
     .hamburger_menu {
-        display: none;
-      }
-      /* 同時確保手機版的漢堡按鈕也隱藏 */
-      .hamburger {
-        display: none;
-      }
+      display: block; /* 結構保留 */
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 50vw;      
+      height: 100vh;    
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: -2px 0 4px rgba(0,0,0,0.1);
+      z-index: 200;
+      overflow-y: auto;
+      padding: 20px;
+      transform: translateX(100%); /* 初始狀態：完全移出畫面右側 */
+      transition: transform 0.3s ease;
+    }
+    /* 當 checkbox 勾選時，漢堡選單滑入 */
+    .menu-toggle:checked ~ .hamburger_menu {
+      transform: translateX(0);
+    }
+    /* Overlay：覆蓋全頁，點擊時也會切換 checkbox（因此關閉選單） */
+    .menu-toggle:checked ~ .menu-overlay {
+      display: block;
+    }
+    .menu-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: 190;
+      /* 可設定半透明背景幫助聚焦選單，或完全透明 */
+      background: transparent;
+    }
   }
   @media screen and (min-width: 1200px) and (max-width: 1399px) {
     .header_logo img.logo {
@@ -377,5 +423,6 @@
         margin: 0;
         /* 其他排版可依需要微調 */
       }
+   
   }
   
