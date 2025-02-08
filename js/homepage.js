@@ -8,7 +8,7 @@ let currentIndex = 0;
 const slideCount = slides.length; // 這裡包含複製的第一張
 const actualSlideCount = slideCount - 1; // 原本的幻燈片數量（8 張）
 
-// 時間設定：每張停 2000ms，過渡 500ms
+// 時間設定：每張停 5000ms，過渡 500ms
 const pauseDuration = 5000;
 const transitionDuration = 500;
 
@@ -17,8 +17,14 @@ function updateSlidePosition() {
   carouselInner.style.transform = `translateX(-${currentIndex * 100}%)`;
 }
 
-// 自動播放
+// 自動播放：先設定計時器
 let autoPlayInterval = setInterval(nextSlide, pauseDuration + transitionDuration);
+
+// 重新啟動自動輪播計時器的函式
+function resetAutoPlayTimer() {
+  clearInterval(autoPlayInterval);
+  autoPlayInterval = setInterval(nextSlide, pauseDuration + transitionDuration);
+}
 
 function nextSlide() {
   currentIndex++;
@@ -54,17 +60,15 @@ function prevSlide() {
   }
 }
 
-// 按鈕點擊事件：手動切換時暫停自動播放，再重新啟動
+// 按鈕點擊事件：手動切換時重置自動播放計時器
 prevBtn.addEventListener('click', () => {
-  clearInterval(autoPlayInterval);
   prevSlide();
-  autoPlayInterval = setInterval(nextSlide, pauseDuration + transitionDuration);
+  resetAutoPlayTimer();
 });
 
 nextBtn.addEventListener('click', () => {
-  clearInterval(autoPlayInterval);
   nextSlide();
-  autoPlayInterval = setInterval(nextSlide, pauseDuration + transitionDuration);
+  resetAutoPlayTimer();
 });
 
 // 手勢滑動支援（觸控事件）
@@ -79,7 +83,7 @@ carouselInner.addEventListener('touchstart', (e) => {
 carouselInner.addEventListener('touchend', (e) => {
   touchEndX = e.changedTouches[0].screenX;
   handleSwipeGesture();
-  autoPlayInterval = setInterval(nextSlide, pauseDuration + transitionDuration);
+  resetAutoPlayTimer();
 });
 
 function handleSwipeGesture() {
