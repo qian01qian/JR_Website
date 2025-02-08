@@ -1,66 +1,121 @@
 :root {
-    --main-bg-color: #a1b7df;
-    --main-text-color: #000;
-    --light-text-color: #666;
-    --white: #fff;
-    --shadow-color: rgba(0, 0, 0, 0.2);
-    --hover-shadow-color: rgba(0, 0, 0, 0.3);
-    --transition-duration: 0.2s;
+  --main-bg-color: #a1b7df;
+  --main-text-color: #000;
+  --light-text-color: #666;
+  --white: #fff;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --hover-shadow-color: rgba(0, 0, 0, 0.3);
+  --transition-duration: 0.2s;
+}
+.body1{
+  width: 1200px;
+  margin: 0 auto;
+  padding:   30px 0 40px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.body1 .security_title{
+  font-size: 2rem;
+  font-weight: bolder;    
+}
+.sandwich{
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 30px;
+  margin-bottom: 5px;
+}
+.sandwich a{
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--main-text-color);
+}
+/* 淡入上移的動畫效果 */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px); /* 從下方移入 */
   }
-  .body1{
-    width: 1200px;
-    margin: 0 auto;
-    padding:   30px 0 40px 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  100% {
+      opacity: 1;
+      transform: translateY(0);
   }
-  .body1 .security_title{
-    font-size: 2rem;
-    font-weight: bolder;    
-  }
-  .sandwich{
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px 30px;
-    margin-bottom: 5px;
-  }
-  .sandwich a{
-    text-decoration: none;
-    font-weight: 700;
-    color: var(--main-text-color);
-  }
-  /* 淡入上移的動畫效果 */
-  @keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px); /* 從下方移入 */
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-  }
+}
 .fade-in-up {
-  opacity: 0; /* 初始狀態 */
-  animation: fadeInUp 0.8s ease-out;
-  animation-fill-mode: forwards; /* 確保動畫結束時保持最終狀態 */
+opacity: 0; /* 初始狀態 */
+animation: fadeInUp 0.8s ease-out;
+animation-fill-mode: forwards; /* 確保動畫結束時保持最終狀態 */
 }
 
 
 .security_image {
-    width: 1000px; /* 設定圖片寬度 */
-    max-width: 100%; /* 確保圖片在小螢幕上自適應 */
-    margin: 0 auto; /* 使用 auto 使圖片水平置中 */
-    display: block; /* 確保圖片為塊級元素 */
-    text-align: center; /* 確保圖片的內部元素居中 */
+  width: 1000px; /* 設定圖片寬度 */
+  max-width: 100%; /* 確保圖片在小螢幕上自適應 */
+  margin: 0 auto; /* 使用 auto 使圖片水平置中 */
+  display: block; /* 確保圖片為塊級元素 */
+  text-align: center; /* 確保圖片的內部元素居中 */
 }
 
 .security_image img {
-  width: 800px; /* 設定圖片寬度 */
-  max-width: 100%; /* 在小螢幕上保持自適應 */
-  height: auto; /* 確保圖片比例正確 */
-  display: block; /* 確保圖片為塊級元素 */
-  text-align: center; /* 確保圖片的內部元素居中 */
-  margin: 0 auto; /* 使用 auto 使圖片水平置中 */
+width: 800px; /* 設定圖片寬度 */
+max-width: 100%; /* 在小螢幕上保持自適應 */
+height: auto; /* 確保圖片比例正確 */
+display: block; /* 確保圖片為塊級元素 */
+text-align: center; /* 確保圖片的內部元素居中 */
+margin: 0 auto; /* 使用 auto 使圖片水平置中 */
+}
+/* ───────────────────────
+   RWD 斷點設定
+   ─────────────────────── */
+
+/* 手機版：0px - 767px */
+@media screen and (max-width: 767px) {
+  /* 這裡可以放手機版的調整 */
+  .body1{
+    max-width: 330px;
+  }
+  .sandwich{
+    display: none;
+  }
+  .security_title{
+    display: flex;
+    justify-content: center;
+  }
+  @media screen and (min-width:400px) {
+    .body1{
+      max-width: 390px;
+    }
+  }
+}
+
+/* 小平板：768px - 1023px */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* 這裡可以放小平板的調整 */
+  .body1{
+    max-width: 650px;
+  }
+}
+
+/* 大平板：1024px - 1199px */
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  /* 這裡可以放大平板的調整 */
+  .body1{
+    max-width: 900px;
+  }
+}
+
+/* 小桌機：1200px - 1399px */
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  /* 這裡可以放小桌機的調整 */
+  .body1{
+    max-width: 1100px;
+  }
+}
+
+/* 大桌機：1400px 以上 */
+@media screen and (min-width: 1400px) {
+  /* 這裡可以放大桌機的調整 */
+  .body1{
+    max-width: 1300px;
+  }
 }

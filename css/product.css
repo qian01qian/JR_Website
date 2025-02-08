@@ -167,14 +167,21 @@
     font-size: 2rem;
     font-weight: bolder;
 }
-
+.product_title_mobile {
+    display: none;
+}
 .category-subtitle_mobile {
     display: none;
 }
 .carousel-container {
     display: none;
 }
-
+.category-section{
+  padding: 0%;
+}
+.function{
+  display: none;
+}
 
 /* 📱 手機版 (0px – 767px) */
 @media screen and (max-width: 767px) {
@@ -182,18 +189,46 @@
     max-width:350px;
     padding: 20px 10px;
   }
+  .body1 .product_title{
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+  }
   .category-title{
    margin-top: 0;
+   padding: 0%;
   }  
   .category-subtitle{
     display: none;
+    
   }
   .category-subtitle_mobile{
     display: block;
     font-size: 1.1rem;
   }
-  .product_title{
+  .product_intro .product_title{
    display: none;
+  }
+  .product_intro .product_title_mobile {
+    display: block;
+    display: flex;
+    justify-self: center;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+  .function{
+    display: block;
+    margin-top: 10px;
+    color: gray(0.3);
+    font-weight: 400;
+    font-size: 1rem;
+  }
+  @media screen and (min-width:350px) {
+    .product_intro .product_title_mobile {
+      font-size: 1.5rem;
+    }
+    
   }
   .sandwich{
     display: none;
@@ -273,24 +308,133 @@
   .carousel-button.next {
     right: 10px;
   }
+  .slide-info h3{
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    font-weight: 900;
+  }
+  .slide-info p{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
 }
 
 /* 📲 小平板 (768px – 1023px) */
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-    
+    .body1 {
+        max-width: 680px;
+        padding: 20px 10px;
+    }
+    .category-info h3{
+        font-size: 1.4rem;
+        margin-top: 5px;    
+    }
+    .category-info p{
+      margin-top: 0;
+      font-size: 1rem;
+    }
+    .category-card {
+        height: 300px;
+    }
+    .product_intro .product_title{
+      display: none;
+    }
+    .product_intro .product_title_mobile {
+      display: block;
+      display: flex;
+      justify-self: center;
+      text-align: center;
+      font-size: 2rem;
+      margin-top: 0;
+    }
+
 }
 
 /* 💻 大平板 (1024px – 1199px) */
 @media screen and (min-width: 1024px) and (max-width: 1199px) {
-   
+  .body1 {
+    max-width: 850px;
+    padding: 20px 10px;
+}
+.category-info h3{
+    font-size: 1.4rem;
+    margin-top: 5px;    
+}
+.category-info p{
+  margin-top: 0;
+  font-size: 1rem;
+}
+.category-card {
+    height: 300px;
+}
+.product_intro .product_title{
+  display: none;
+}
+.product_intro .product_title_mobile {
+  display: block;
+  display: flex;
+  justify-self: center;
+  text-align: center;
+  font-size: 2.3rem;
+  margin-top: 0;
+}
 }
 
 /* 🖥️ 小桌機 (1200px – 1399px) */
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
-   
+  .body1 {
+    max-width: 1000px;
+    padding: 20px 10px;
+}
+.product_title{
+  margin-bottom: 0;
+  margin-top: 30px;
+  font-size: 2rem;
+}
+.sandwich{
+ margin-bottom: 0px;
+ margin-top: 20px;
+ padding: 0%;
+}
+.category-info h3{
+    font-size: 1.4rem;
+    margin-top: 5px;    
+}
+.category-info p{
+  margin-top: 0;
+  font-size: 1rem;
+}
 }
 
 /* 🖥️✨ 大桌機 (1400px 以上) */
 @media screen and (min-width: 1400px) {
-    
+  .body1 {
+    max-width: 1300px;
+    padding: 20px 10px;
+}
+.product_title{
+  margin-bottom: 0;
+  margin-top: 50px;
+  font-size: 2.3rem;
+}
+.sandwich{
+ margin-bottom: 0px;
+ margin-top: 20px;
+ padding: 0%;
+}
+.category-title{
+  margin-top: 0;
+}
+.category-card {
+    height: 310px;
+}
+.category-info h3{
+    font-size: 1.4rem;
+    margin-top: 5px;    
+}
+.category-info p{
+  margin-top: 0;
+  font-size: 1rem;
+}
 }
