@@ -1,0 +1,38 @@
+.body{
+    background-color: #ffe9ef;
+}
+
+
+.title {
+    font-weight: 900;
+    margin-bottom: 0;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+}
+/* 容器置中對齊 */
+.heart,
+.heart1 {
+    display: flex;
+    justify-content: center;  /* 水平置中 */
+    align-items: center;      /* 垂直置中（如果需要） */
+    margin: 20px 0;           /* 上下間距 */
+}
+
+/* 圖片大小設定 */
+.heart img,
+.heart1 img {
+    width: 200px;             /* 固定寬度 200px */
+    max-width: 200px;         /* 限制最大寬度 */
+    height: auto;             /* 高度自動調整 */
+    object-fit: contain;      /* 保持圖片比例，不變形 */
+}
+

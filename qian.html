@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Qian's Easter Egg</title>
+    <link rel="shortcut icon" href="icon.ico">
+    <link rel="stylesheet" href="css/qian.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body">
+
+    <!-- header -->
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+
+    <h1 class="title">Qian's Easter Egg</h1>
+    <p class="p">阿 被你找到我的彩蛋了</p>
+    <p class="p">這個網站是我！徐睿謙！在寒假時間花了兩周的成品！</p>
+    <div class="heart">
+        <img src="res/heart-love.gif" alt="心心">
+    </div>
+    <p class="p">希望你喜歡這個網站！</p>
+    <div class="heart1">
+        <img src="res/hearts-loading.gif" alt="心心">
+    </div>
+    
+     <!-- footer -->
+     <div id="footer"></div>
+     <script>
+         fetch('footer.html')
+             .then(response => response.text())
+             .then(data => document.getElementById('footer').innerHTML = data);
+     </script>
+
+</body>
+</html>
