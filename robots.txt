@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /qian.html
+
+Sitemap: https://www.jr-company.com.tw/sitemap.xml
