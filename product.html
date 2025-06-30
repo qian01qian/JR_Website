@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>晢瑞實業 ｜ 生產產品系列</title>
     <link rel="shortcut icon" href="icon.ico">
+    
+    <!-- 防FOUC CSS - 必須最先載入 -->
+    <link rel="stylesheet" href="css/anti-fouc.css">
     <link rel="stylesheet" href="css/product.css">
+    
+    <!-- 防FOUC腳本 -->
+    <script>
+        document.documentElement.style.visibility = 'hidden';
+    </script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEZ9H4K8HS"></script>
@@ -17,6 +25,8 @@
   gtag('config', 'G-BEZ9H4K8HS');
 </script>
 <body>
+    <!-- 載入防FOUC腳本 -->
+    <script src="js/anti-fouc.js"></script>
 
     <!-- header -->
     <div id="header"></div>

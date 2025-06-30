@@ -7,8 +7,19 @@
   <meta name="describtion" content="晢瑞實業有限公司主要專業組裝、包裝、DIP、測試、維修、手焊加工。測組包、加工廠、電子代工廠、耳機、代工廠、桃園代工廠、監視器、路由器">
   <title>晢瑞實業有限公司官方網站 ｜ 專業組包裝、DIP、維修測試之電子代工廠</title>
   <link rel="shortcut icon" href="icon.ico">
+  
+  <!-- 防FOUC CSS - 必須最先載入 -->
+  <link rel="stylesheet" href="css/anti-fouc.css">
+  
+  <!-- 主要樣式表 -->
   <link rel="stylesheet" href="css/homepage.css?v=1.0.0">
   <link rel="stylesheet" href="css/style.css">
+  
+  <!-- 防FOUC腳本 - 內聯執行 -->
+  <script>
+    // 立即隱藏頁面防止FOUC
+    document.documentElement.style.visibility = 'hidden';
+  </script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-BEZ9H4K8HS"></script>
@@ -21,6 +32,9 @@
 </script>
 
 <body>
+  <!-- 載入防FOUC腳本 -->
+  <script src="js/anti-fouc.js"></script>
+  
   <!-- header -->
   <div id="header"></div>
   <script>
@@ -210,7 +224,7 @@
   <div id="footer"></div>
   <script>
     fetch('footer.html')
-      .then(respose => respose.text())
+      .then(response => response.text())
       .then(data => document.getElementById('footer').innerHTML = data);
   </script>
 
