@@ -1,4 +1,9 @@
+# robots.txt for 晢瑞實業有限公司
 User-agent: *
-Disallow: /qian.html
+Allow: /
 
-Sitemap: https://www.jr-company.com.tw/sitemap.xml
+# 不允許搜尋引擎索引的頁面
+Disallow: /html/qian.html
+
+# Sitemap location (請根據實際網域更新)
+# Sitemap: https://www.jheruei.com/sitemap.xml
