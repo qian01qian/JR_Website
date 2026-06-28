@@ -30,7 +30,7 @@ html, body {
    主要內容容器設定：置中並限制最大寬度
    ─────────────────────── */
 .container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
 }
 
@@ -44,7 +44,8 @@ html, body {
 }
 
 .body1 {
-    width: 1200px;
+    width: 1500px;
+    max-width: 100%;
     margin: 0 auto;
     padding: 30px 0 40px 0;
 }
@@ -78,7 +79,7 @@ html, body {
 
 /* 組織圖圖片 */
 .org_image {
-    width: 800px;
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -171,18 +172,18 @@ html, body {
       margin-bottom: 30px;
   }
   .container img{
-    width: 750px;
+    width: 100%;
   }
 }
 .container img{
-  width: 800px;
+  width: 100%;
 }
 }
 
 /* 🖥️ 小桌機：1200px – 1399px */
 @media screen and (min-width: 1200px) and (max-width: 1399px) {
   .body1 {
-    max-width: 1100px;
+    max-width: 1300px;
   }
   .body1 .org_title {
     font-size: 2.5rem;
@@ -192,14 +193,14 @@ html, body {
     margin-bottom: 30px;
 }
 .container img{
-  width: 750px;
+  width: 100%;
 }
 }
 
 /* 🖥️✨ 大桌機：1400px 以上 */
 @media screen and (min-width: 1400px) {
   .body1 {
-    max-width: 1200px;
+    max-width: 1500px;
   }
   .body1 .org_title {
     font-size: 2.8rem;
@@ -209,6 +210,6 @@ html, body {
     margin-bottom: 30px;
 }
 .container img{
-  width: 850px;
+  width: 100%;
 }
 }
